@@ -1,0 +1,78 @@
+/* App background */
+body, html, #root {
+   margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #eb74d9 0%, #ACB6E5 100%);
+  overflow: hidden;
+}
+
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.routes-dropdown {
+  padding: 12px 20px; 
+  border-radius: 20px;
+  background-color: #ffffffcc; 
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 250px;          
+  max-width: 90%;
+}
+.routes-dropdown:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+.map-container {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.transit-info {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #ffffffcc;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+.bus-info {
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: #ffffff8a;
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.map-container {
+  flex: 1; /* fills remaining height */
+  position: relative;
+}
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Fade in and up animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
